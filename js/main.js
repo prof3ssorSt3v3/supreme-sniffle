@@ -1,3 +1,4 @@
+//https://github.com/prof3ssorSt3v3/supreme-sniffle
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -59,9 +60,11 @@ function uploadFile(ev) {
       })
       .then((data) => {
         console.log(data);
+        form.reset();
       })
       .catch((err) => {
         console.warn(err);
+        form.reset();
       });
   } else {
     console.warn('Must include a non-empty file');
